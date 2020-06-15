@@ -1,12 +1,13 @@
 import React from 'react';
 import Input from './Input';
-
-function List() {
-  return null;
-}
-
+import List from './List';
 
 export default function App() {
+  const tasks = [
+    { id: 1, title: '아무 것도 하지 않기 #1' },
+    { id: 2, title: '아무 것도 하지 않기 #2' },
+  ];
+
   function onClick() {
     // TODO: 할 일 추가
   }
@@ -15,7 +16,7 @@ export default function App() {
     <div>
       <h1>To-do</h1>
       <Input onClick={onClick} />
-      <List />
+      <List tasks={tasks} />
     </div>
   );
 }
