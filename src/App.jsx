@@ -30,12 +30,20 @@ export default function App() {
     });
   }
 
+  function handleClickDeleteTask(id) {
+    setState({
+      ...state,
+      tasks: tasks.filter((task) => task.id !== id),
+    });
+  }
+
   return (
     <Page
       taskTitle={taskTitle}
       onChangeTitle={handleChangeTitle}
       onClickAddTask={handleClickAddTask}
       tasks={tasks}
+      onClickDeleteTask={handleClickDeleteTask}
     />
   );
 }
